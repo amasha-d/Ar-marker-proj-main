@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class DestroyBomb : MonoBehaviour
 {
-    private void OnBecameInvisible()
-    {
-        Destroy(gameObject);
-    }
+    [SerializeField] ParticleSystem particles;
+  
     private void OnCollisionEnter(Collision collision)
     {
+        particles.transform.position = gameObject.transform.position;
+        particles.Play();
         Destroy(gameObject);
     }
 }
