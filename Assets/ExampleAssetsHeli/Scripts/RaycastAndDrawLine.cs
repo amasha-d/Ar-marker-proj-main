@@ -6,13 +6,16 @@ public class RaycastAndDrawLine : MonoBehaviour
 {
     public float maxDistance = 20f;
     private LineRenderer lineRenderer;
+    public Color lineColor = Color.green;
 
     void Start()
     {
         // Initialize LineRenderer component
         lineRenderer = gameObject.AddComponent<LineRenderer>();
-        lineRenderer.startWidth = 0.02f;
-        lineRenderer.endWidth = 0.02f;
+        lineRenderer.startWidth = 0.005f;
+        lineRenderer.endWidth = 0.002f;
+        lineRenderer.material = new Material(Shader.Find("Standard"));
+        lineRenderer.material.color = lineColor;
     }
 
     void Update()

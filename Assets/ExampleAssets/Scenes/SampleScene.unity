@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistance: 20
+  lineColor: {r: 1, g: 0, b: 0.06054926, a: 1}
 --- !u!1 &259715463 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8704994664748943603, guid: d9d8339462479254a88acb33734e3b98,
